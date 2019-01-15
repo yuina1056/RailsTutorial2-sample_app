@@ -6,7 +6,7 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     @other_user = users(:archer)
   end
 
-  test "lauput links" do
+  test "layout links" do
     get root_path
     assert_template 'static_pages/home'
     assert_select "a[href=?]",root_path, count: 2
